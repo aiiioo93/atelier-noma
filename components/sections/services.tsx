@@ -1,31 +1,11 @@
 import Link from "next/link";
 
-const services = [
-  {
-    number: "01",
-    title: "Architecture intérieure",
-    description:
-      "Nous concevons des espaces cohérents, fonctionnels et sensibles, de la première esquisse jusqu’aux derniers détails.",
-  },
-  {
-    number: "02",
-    title: "Rénovation complète",
-    description:
-      "Nous repensons entièrement les volumes, les circulations, les matériaux et la lumière pour révéler le potentiel d’un lieu.",
-  },
-  {
-    number: "03",
-    title: "Décoration & mobilier",
-    description:
-      "Nous sélectionnons mobilier, luminaires, matières et objets pour créer une atmosphère personnelle et intemporelle.",
-  },
-];
+import { services } from "@/data/services";
 
 export default function Services() {
   return (
     <section className="bg-foreground py-20 text-background sm:py-24 lg:py-28">
       <div className="mx-auto grid max-w-7xl gap-16 px-6 md:grid-cols-[0.85fr_1.15fr] md:gap-20 lg:px-8">
-        {/* Partie gauche */}
         <div>
           <p className="mb-5 font-sans text-xs uppercase tracking-[0.3em] text-background/55">
             Nos services
@@ -49,7 +29,6 @@ export default function Services() {
           </Link>
         </div>
 
-        {/* Partie droite */}
         <div className="border-t border-background/20">
           {services.map((service) => (
             <article
@@ -66,7 +45,7 @@ export default function Services() {
                 </h3>
 
                 <p className="mt-4 max-w-xl font-sans text-sm leading-6 text-background/55 sm:text-base sm:leading-7">
-                  {service.description}
+                  {service.shortDescription}
                 </p>
               </div>
             </article>
