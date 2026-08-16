@@ -3,6 +3,7 @@ import { Geist, Cormorant_Garamond, Noto_Sans, Playfair_Display } from "next/fon
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
 
 const playfairDisplayHeading = Playfair_Display({subsets:['latin'],variable:'--font-heading'});
 
@@ -35,9 +36,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={cn("font-sans", notoSans.variable, playfairDisplayHeading.variable)}>
-  <body className={`${geist.variable} ${cormorant.variable}`}>
+<body className={`${geist.variable} ${cormorant.variable}`}>
   <Header />
   {children}
+  <Footer />
 </body>
     </html>
   );
