@@ -32,7 +32,7 @@ export default function Footer() {
           </nav>
         </div>
 
-        <div className="mt-5 flex items-center justify-between border-t border-border pt-4 font-sans text-[10px] text-foreground/40 sm:mt-6 sm:text-xs">
+        <div className="mt-4 flex items-center justify-between border-t border-border pt-3 font-sans text-[10px] text-foreground/40 sm:mt-5 sm:text-xs">
           <p>© {new Date().getFullYear()} Atelier Noma</p>
 
           <p>Paris, France</p>
